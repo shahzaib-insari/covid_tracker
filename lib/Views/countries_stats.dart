@@ -1,4 +1,5 @@
-import 'package:covid_tracker/Services/stats_services.dart';
+
+import 'package:covid_tracker/ViewModels/world_stats_view_model.dart';
 import 'package:covid_tracker/Views/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -13,7 +14,7 @@ class _CountriesStatsScreenState extends State<CountriesStatsScreen> {
   TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    StatsServices statsServices = StatsServices();
+    WorldStatsViewModel statsServices = WorldStatsViewModel();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,

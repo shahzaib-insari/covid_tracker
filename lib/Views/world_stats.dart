@@ -1,10 +1,9 @@
 import 'package:covid_tracker/Models/world_stats_model.dart';
+import 'package:covid_tracker/ViewModels/world_stats_view_model.dart';
 import 'package:covid_tracker/Views/countries_stats.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:pie_chart/pie_chart.dart';
-
-import 'package:covid_tracker/Services/stats_services.dart';
 
 class WorldStatesScreen extends StatefulWidget {
   WorldStatesScreen({Key? key}) : super(key: key);
@@ -27,7 +26,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
   ];
   @override
   Widget build(BuildContext context) {
-    StatsServices statsServices = StatsServices();
+    WorldStatsViewModel statsServices = WorldStatsViewModel();
     return Scaffold(
       body: SafeArea(
         child: Padding(
